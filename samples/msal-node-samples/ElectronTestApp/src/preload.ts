@@ -11,7 +11,7 @@ import { GRAPH_CONFIG, IpcMessages } from "./Constants";
  * the Renderer process controlled access to some Node APIs
  * by leveraging IPC channels that have been configured for
  * communication between the Main and Renderer processes.
- */
+ */ 
 contextBridge.exposeInMainWorld("renderer", {
   sendLoginMessage: () => {
 	  ipcRenderer.send(IpcMessages.LOGIN);

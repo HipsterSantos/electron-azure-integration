@@ -59,24 +59,18 @@ export default class Main {
         this.mainWindow = new BrowserWindow({
             width: 1000,
             height: 1000,
-            /**
-             * Preload script serves as an interface between the Main process
-             * that has access to Node API and the Renderer process which controls
-             * the user interface but is otherwise not trustworthy of directly handling
-             * the Node API.
-             */
             webPreferences: { preload: path.join(__dirname, 'preload.js') }
         });
     }
 
     private static publish(message: string, payload: any): void {
+        console.log('on publish ',message, payload)
         Main.mainWindow.webContents.send(message, payload);
     }
 
     private static async attemptSSOSilent(): Promise<void> {
         const account = await Main.authProvider.loginSilent();
         await Main.loadBaseUI();
-
         if (account) {
             console.log("Successful silent account retrieval");
             Main.publish(IpcMessages.SHOW_WELCOME_MESSAGE, account);

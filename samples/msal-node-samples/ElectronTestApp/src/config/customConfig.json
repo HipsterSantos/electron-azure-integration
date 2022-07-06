@@ -1,17 +1,17 @@
 {
     "authOptions":
         {
-            "clientId": "8fcb9fc1-d8f9-49c0-b80e-a8a8a201d051",
+            "clientId": "9552b61d-fec9-4e56-9a41-89827445b663",
             "authority": "https://login.windows-ppe.net/common/"
         },
     "request":
     {
         "authCodeUrlParameters": {
             "scopes": ["user.read"],
-            "redirectUri": "msal4b0db8c2-9f26-4417-8bde-3f0e3656f8e0://auth"
+            "redirectUri": "msal9552b61d-fec9-4e56-9a41-89827445b663://auth"
         },
         "authCodeRequest": {
-            "redirectUri": "msal4b0db8c2-9f26-4417-8bde-3f0e3656f8e0://auth",
+            "redirectUri": "msal9552b61d-fec9-4e56-9a41-89827445b663://auth",
             "scopes": ["User.Read"]
         }
     },
@@ -21,7 +21,7 @@
     },
     "customProtocol":
     {
-        "name": "msal4b0db8c2-9f26-4417-8bde-3f0e3656f8e0"
+        "name": "msal9552b61d-fec9-4e56-9a41-89827445b663"
     },
     "cache": {
         "cacheLocation": "./data/cache.json"
